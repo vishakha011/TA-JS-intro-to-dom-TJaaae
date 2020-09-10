@@ -4,8 +4,14 @@ Write a function named `createInputElm` that accepts two parameter (label and `t
 default value to be "text" and return the input element inside label. (create it using `createElement`)
 
 */
-
-// Your code goes here
+let labelElement = document.createElement('label');
+let inputElement = document.createElement('input');
+function createInputElm(label, type = "text"){
+  labelElement.innerText = label; 
+  inputElement.type = type;
+  labelElement.append(inputElement)
+  return labelElement;
+}
 
 // TEST
 createInputElm('Your name'); //<label>Your name: <input type="text"></label>
@@ -22,6 +28,25 @@ createInputElm('Your age', 'number'); //<label>Your age: <input type="number"></
 // 3. Create a function named `createList` that accept and array of data like ['Mango', 'Apple', 'Banana'] and returns
 // the html for the link like <ul> <li>Mango</li>  <li>Apple</li>  <li>Banana</li> </ul>
 // Your code goes here
+// for each element create a new li
+// append the element(create text node)
+//apend li to ul
+let ul = document.createElement('ul');
+// let createList =  array.forEach(element => {
+//  let li = document.createElement('li');
+//  let text = document.createTextNode(element);
+//  li.append(element);
+//  ul.append(li);
+// });
+
+function createList(arr){
+  arr.forEach(element => {
+    let li = document.createElement('li');
+    let text = document.createTextNode(element);
+    li.append(element);
+    ul.append(li);
+   });
+}
 
 // TEST
 createList(['ALABAMA', 'ALASKA', 'HAWAII', 'KENTUCKY']);
@@ -40,6 +65,15 @@ createList(['Afghanistan', 'Antarctica', 'Congo', 'Estonia']);
 */
 
 // Your code goes here
+// function createTodoList(arr){
+//   arr.forEach(element => {
+//     let para = document.createElement('p');
+//     let name = document.createTextNode(element[0]);
+//     para.append(name);
+//   })
+
+// }
+
 
 // TEST
 createTodoList([
