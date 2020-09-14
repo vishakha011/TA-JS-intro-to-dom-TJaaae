@@ -1,0 +1,61 @@
+*,
+*::before.
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+.header {
+    background-color: #377E80;
+    text-align: center;
+    padding: 1.5rem;
+}
+h1 {
+    font-size: 2rem;
+    color: #FCFE58;
+}
+
+h2 {
+    margin: 0.2rem 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem;
+    background-color: #FAF1E8;
+}
+
+.card {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 1px 1px 10px #FDF5E8;
+}
+
+.img {
+    width: 10rem;
+    height: auto;
+}
+
+.author {
+    padding: 0.5rem 0;
+    margin: 0.2rem 0 1rem;
+}
+
+.button {
+    color: #fff;
+    background-color: #377E80;
+    padding: 0.8rem 1.5rem;
+    /* margin-top: 1rem; */
+    border-radius: 0.2rem;
+}
